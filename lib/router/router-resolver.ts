@@ -73,10 +73,12 @@ export class RouterResolver {
       if (validQuerySchame) {
         allMiddlewares.push(ParamValidate(validQuerySchame, { type: 'query' }));
       }
+
       const validBodySchame = Reflect.getMetadata(METADATA_ROUTER_BODY_SCHAME, Router.prototype, prop);
       if (validBodySchame) {
         allMiddlewares.push(ParamValidate(validBodySchame, { type: 'body' }));
       }
+
       this.koaRouterRegisterHelper(requestMethod)(requestPath, ...allMiddlewares, executionContex.create(prop));
     });
   }
@@ -92,9 +94,11 @@ export class RouterResolver {
 
     cronJobs.forEach(prop => {
       const { cronTime, options } = Reflect.getMetadata(METADATA_CRON, Router.prototype, prop);
+
       if (options.onlyRunMaster && !isMaster()) {
         return;
       }
+
       this.logger.info('创建计划任务 %s.%s cron：%s', Router.name, prop, cronTime);
       const job = new CronJob(cronTime, Router.prototype[prop].bind(Router.prototype));
       job.start();
