@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuerySchame = exports.BodySchame = void 0;
 require("reflect-metadata");
 const joi = require("joi");
 const constants_1 = require("../constants");

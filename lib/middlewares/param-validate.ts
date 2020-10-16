@@ -8,7 +8,6 @@ import { PARAM_VALIDATIONE_RROR } from '../constants';
  *
  * @return {function} Koa middleware.
  */
-
 const joiOptions = {
   allowUnknown: true, // 允许出现未声明的字段
   stripUnknown: true, // 移除未声明的字段

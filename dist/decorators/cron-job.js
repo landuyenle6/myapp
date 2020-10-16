@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CronJob = void 0;
 require("reflect-metadata");
 const constants_1 = require("../constants");
 exports.CronJob = (cronTime, options = { onlyRunMaster: true }) => {

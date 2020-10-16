@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.loadPackage = exports.globs = void 0;
 const Path = require("path");
 const glob = require("glob");
 function globs(root, globsRex, options) {

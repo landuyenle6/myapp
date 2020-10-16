@@ -1,11 +1,11 @@
-# [souljs](https://github.com/test/souljs)
+# [myapp](https://github.com/test/myapp)
 
 A nodejs web framework, 对koa简单包装，装饰风格，内置开发常用中间件，使用typescript编写
 
 ## 快速开始
 
 ``` bash
-git clone https://github.com/test/souljs-starter.git
+git clone https://github.com/test/myapp-starter.git
 
 npm install && npm run start
 ```
@@ -15,7 +15,7 @@ Node.js >= 8.0.0 required.
 #### 创建应用实例
 
 ```typescript main.ts
-import { createApplication } from 'souljs';
+import { createApplication } from 'myapp';
 import * as router from './router';
 
 async function main() {
@@ -175,7 +175,7 @@ test(@Body() Body: any, @Query() query: any) {}
 ### 自定义装饰器
 
 ```typescript
-import { Use, Description } from 'souljs';
+import { Use, Description } from 'myapp';
 export default function Role(...roles: string[]) {
   const role = Use(async (ctx: Koa.Context, next: () => void) => {
     const sql = `

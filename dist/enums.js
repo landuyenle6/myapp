@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParamDecoratorType = void 0;
 var ParamDecoratorType;
 (function (ParamDecoratorType) {
     ParamDecoratorType["Request"] = "Request";

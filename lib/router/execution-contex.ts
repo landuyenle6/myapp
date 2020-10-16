@@ -51,11 +51,9 @@ export class ExecutionContex {
     const results: any[] = [];
     const routerParams: any[] =
       Reflect.getMetadata(METADATA_ROUTER_PARAMS, this.ContextClass.prototype, propertyKey) || [];
-
     routerParams.forEach((param: { index: number; convertFunc: IParamConvertFunc; data: any }) => {
       results[param.index] = this.convertParamDecorator(param, ctx);
     });
-
     return results;
   }
 

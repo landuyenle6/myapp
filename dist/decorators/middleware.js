@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Use = void 0;
 require("reflect-metadata");
 const constants_1 = require("../constants");
 function Use(mid) {

@@ -5,6 +5,7 @@ interface IOptions {
   onlyRunMaster?: boolean;
 }
 
+
 /**
  *
  * @param cronTime The time to fire off your job, This can be in the form of cron syntax

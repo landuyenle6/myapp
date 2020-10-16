@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Application = void 0;
 const http = require("http");
 const Koa = require("koa");
 const router_resolver_1 = require("./router/router-resolver");

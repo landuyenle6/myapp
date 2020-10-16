@@ -27,6 +27,7 @@ export interface ISwaggerOption {
 
 export function useSwaggerApi(app: Application, swaggerConfig: ISwaggerOption) {
   const pathToSwaggerUi = SwaggerUIDist.getAbsoluteFSPath();
+  
   app.getKoaInstance().use(
     mount((swaggerConfig.prefix || '/api') + '/index.html', async (ctx: Koa.Context) => {
       const d: string = await new Promise((resolve, reject) => {
@@ -41,11 +42,13 @@ export function useSwaggerApi(app: Application, swaggerConfig: ISwaggerOption) {
       ctx.body = d.replace(/url:\s*?"\S*"/gi, `url:"${swaggerConfig.url}",docExpansion: 'none'`);
     }),
   );
+
   app.getKoaInstance().use(
     mount(swaggerConfig.url, (ctx: Koa.Context) => {
       ctx.body = generateApi(app.getRouters(), swaggerConfig);
     }),
   );
+
   app.getKoaInstance().use(
     mount(
       swaggerConfig.prefix || '/api',

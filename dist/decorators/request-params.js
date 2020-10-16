@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Body = exports.Query = exports.Response = exports.Request = exports.Ctx = void 0;
 const param_decorator_tool_1 = require("./param-decorator-tool");
 exports.Ctx = param_decorator_tool_1.createParamDecorator(ctx => {
     return ctx;

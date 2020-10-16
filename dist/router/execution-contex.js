@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionContex = void 0;
 require("reflect-metadata");
 const constants_1 = require("../constants");
 class ExecutionContex {
